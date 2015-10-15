@@ -1,0 +1,38 @@
+html{
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+   height: 100%;
+}
+
+.container{
+  height: 600px;
+}
+
+#navigationHeader{
+    height: 100px;  //Percentage height not working
+    background-color: white;
+}
+
+#headerText{
+  font-size: 40px;
+  color: #4D4D4D;
+  display: block;
+  font-weight: 300;
+}
+
+.left{
+  text-align: left;
+  color: purple;
+  position: fixed;
+  height: 100%;
+}
+
+.right{
+  text-align: right;
+}
+
+#navigationLogo{
+  float: left;
+  padding-top: 2%;
+  padding-right: 5%;
+}

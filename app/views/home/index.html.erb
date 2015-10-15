@@ -1,0 +1,33 @@
+<%= render :partial => 'shared/header' %>
+
+<div class="container">
+  <br/>
+  <h1 id="headerText">Start the Scraping!</h1>
+  <div class="left">
+        <% if false %>
+        <div class="btn-large waves-light blue">
+            <%= link_to 'Sync Now', {:controller => 'home', :action => 'manual_sync'}, class: 'white-text'%>
+        </div>
+        <% end %>
+
+        <%= button_tag 'Sync Now', :type=>'button', :onclick => 'startSync()', class: 'btn-large waves-light blue white-text'%>
+
+        <div class="sk-fading-circle">
+            <div class="sk-circle1 sk-circle"></div>
+            <div class="sk-circle2 sk-circle"></div>
+            <div class="sk-circle3 sk-circle"></div>
+            <div class="sk-circle4 sk-circle"></div>
+            <div class="sk-circle5 sk-circle"></div>
+            <div class="sk-circle6 sk-circle"></div>
+            <div class="sk-circle7 sk-circle"></div>
+            <div class="sk-circle8 sk-circle"></div>
+            <div class="sk-circle9 sk-circle"></div>
+            <div class="sk-circle10 sk-circle"></div>
+            <div class="sk-circle11 sk-circle"></div>
+            <div class="sk-circle12 sk-circle"></div>
+          <div class="loadingText"> Scrapping </div>
+        </div>
+  </div>
+</div>
+
+<%= render :partial => 'shared/footer' %>
