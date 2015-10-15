@@ -1,28 +1,29 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+You need to create your own secrets.yml file
+
+This is located in configs/secrets.yml
+
+
+
+
+The file should look like the following:
+
+development:
+	secret_key_base: PASTE YOUR GENERATED KEY HERE
+
+test:
+  secret_key_base: PASTE YOUR GENERATED KEY HERE
+
+production:
+  secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
+
+
+
+
+
+To generate your key run the following command from the terminal when you are in the home directory of the app:
+
+rake secret
