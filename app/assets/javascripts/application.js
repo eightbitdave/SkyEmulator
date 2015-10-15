@@ -34,7 +34,8 @@ function startSync(){
 }
 
 function onSuccess(data, textStatus, jqXHR ){
-    alert(data);
+    if(data)
+        alert(data);
 }
 
 function onError(jqXHR, textStatus, errorThrown){
