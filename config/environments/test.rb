@@ -5,10 +5,10 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     adderss: "smtp.gmail.com",
     port: 587,
-    domain: "emulatorproject"
+    domain: "emulatorproject",
     authentication: "plain",
     user_name: ENV["EMAIL"],
-    password: ENV["PASSWORD"]
+    password: ENV["PASSWORD"],
     enable_starttls_auto: true
     }
   # The test environment is used exclusively to run your application's
