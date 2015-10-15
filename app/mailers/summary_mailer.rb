@@ -1,0 +1,2 @@
+class SummaryMailer < ApplicationMailer
+end
