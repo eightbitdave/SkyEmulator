@@ -6,10 +6,6 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
-<<<<<<< ours
-    domain: "emulatorproject",
-=======
->>>>>>> theirs
     authentication: "plain",
     user_name: ENV["EMAIL"],
     password: ENV["PASSWORD"],
