@@ -5,5 +5,3 @@ login = MySettingsLoggedInBase.new
 login.setup
 login.test_my_settings_logged_in
 login.teardown
-
-cooks
