@@ -46,3 +46,6 @@ group :development do
   gem 'materialize-sass'
 end
 
+gem 'selenium-client'
+gem 'selenium-webdriver'
+gem 'test-unit'

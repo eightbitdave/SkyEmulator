@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   end
 
   def script
-    load 'file_sort.rb'
-    render :text => "hello"
+    load 'selenium/login_loader.rb'
+    render :text => 'hello'
   end
 end
