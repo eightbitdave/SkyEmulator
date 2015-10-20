@@ -1,6 +1,5 @@
 load 'lib/folder_structure.rb'
 
-
 my_package_folder = []
 bills_and_payments_folder = ["View my bill", "Make a payment", "Change payment due date", "Change payment method"]
 my_orders_folder = ["Track my order", "Claim my reward", "Engineer visits", "Set up viewing card"]
@@ -12,24 +11,27 @@ fs = FolderStructure.new()
 
 #Create parent folder
 parent_folder_Name = "Data"
-latest_folder_name = Time.now().strftime('%Y-%m-%d %S')
+latest_folder_name = 'Latest - ' + Time.now.strftime("%F %T").to_s.to_str
 
 #If the parent path has a name
 if parent_folder_Name != ''
-  if !File.exists?(parent_folder_Name)
-    fs.create_folder(parent_folder_Name)
-  end
-
+  fs.create_folder(parent_folder_Name) unless File.exists?(parent_folder_Name)
   parent_folder_Name = 'Data' + '/'
 end
 
 new_path = parent_folder_Name + latest_folder_name
 
-if File.exists?(new_path)
-  fs.create_back_up(new_path, parent_folder_Name)
-else
-  fs.create_folder(new_path)
-end
+Dir.chdir('Data/')
+folders = Dir.glob('*').select{
+    |f| File.directory? f unless !f.include?("Latest -")
+}
+Dir.chdir('../')
+
+#If there is folder that starts with 'Latest -'
+fs.create_back_up(folders[0], parent_folder_Name) unless !folders.any?
+
+#If not create a new folder
+fs.create_folder(new_path)
 
 fs.populate_folders(new_path, "My Package", my_package_folder)
 fs.populate_folders(new_path, "Bills and Payments", bills_and_payments_folder)
