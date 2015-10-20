@@ -32,34 +32,34 @@ class Myordersmysky < Test::Unit::TestCase
     @driver.action.move_to(el).perform
     @driver.find_element(:link, "My Orders").click
     @wait.until { @driver.page_source.include?("Added to your Sky package?")}
-    @driver.save_screenshot("MyOrdersMain.jpg")
+    @driver.save_screenshot("MyOrdersMain.png")
 
 
     el = @driver.find_element(:id, 'skycom-my-sky')
     @driver.action.move_to(el).perform
     @driver.find_element(:link, "Track my order").click
     @wait.until { @driver.page_source.include?("Added to your Sky package?")}
-    @driver.save_screenshot("TrackOrder.jpg")
+    @driver.save_screenshot("TrackOrder.png")
 
 
     el = @driver.find_element(:id, 'skycom-my-sky')
     @driver.action.move_to(el).perform
     @driver.find_element(:link, "Claim my reward").click
     @wait.until { @driver.find_element(:id, 'claim_vouchers').displayed?}
-    @driver.save_screenshot("ClaimReward.jpg")
+    @driver.save_screenshot("ClaimReward.png")
 
     el = @driver.find_element(:id, 'skycom-my-sky')
     @driver.action.move_to(el).perform
     @driver.find_element(:link, "Engineer visits").click
     @wait.until { @driver.page_source.include?("Added to your Sky package?")}
-    @driver.save_screenshot("EngineerVisits.jpg")
+    @driver.save_screenshot("EngineerVisits.png")
 
     el = @driver.find_element(:id, 'skycom-my-sky')
     @driver.action.move_to(el).perform
 
     @driver.find_element(:link, "Set up viewing card").click
     @wait.until { @driver.find_element(:id, 'classic-step-1').displayed?}
-    @driver.save_screenshot("SetUpViewingCard.jpg")
+    @driver.save_screenshot("SetUpViewingCard.png")
   end
   
   def element_present?(how, what)
