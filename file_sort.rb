@@ -12,7 +12,7 @@ fs = FolderStructure.new()
 
 #Create parent folder
 parent_folder_Name = "Data"
-latest_folder_name = "Latest"
+latest_folder_name = Time.now().strftime('%Y-%m-%d %S')
 
 #If the parent path has a name
 if parent_folder_Name != ''

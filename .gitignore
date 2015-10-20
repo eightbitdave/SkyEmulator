@@ -82,3 +82,6 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
+#Need to ignore the user credentials for the email account on the API
+/config/initializers/app_env_vars.rb
