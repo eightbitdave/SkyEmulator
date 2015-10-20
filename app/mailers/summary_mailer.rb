@@ -1,7 +1,7 @@
 class SummaryMailer < ApplicationMailer
-  default from: 'donotreply@sky.uk'
+  default from: 'ronan.spoor@sky.uk'
 
   def test_email
-    mail(to: 'ronanm@gmail.com', subject: 'Emulator: change summary.')
+    mail(to: 'ronanm@gmail.com', subject: 'test foobar')
   end
 end

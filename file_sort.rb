@@ -1,6 +1,7 @@
 load 'lib/folder_structure.rb'
 
-my_package_folder = []
+
+my_package_folder = [""]
 bills_and_payments_folder = ["View my bill", "Make a payment", "Change payment due date", "Change payment method"]
 my_orders_folder = ["Track my order", "Claim my reward", "Engineer visits", "Set up viewing card"]
 my_details_folder = ["Change details", "Addiontional users", "Moving home"]
