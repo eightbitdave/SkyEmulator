@@ -5,37 +5,38 @@
    <style>
    body {
 	   font-family: sans-serif;
+     padding: 5px;
    }
-   
+
    td {
 	   text-align: center;
    }
+   .sky_logo {
+     width:186px;
+     height:116px;
+   }
+
+
+
+
    </style>
  </head>
  <body>
-   <h1>Bonjour</h1>
-   
+   <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Sky_logo_2014.png" class="sky_logo">
+   <h1>Hello</h1>
+
    <p>
      This is email is to notify that there has been some changes to the website:<br>
    </p>
-   
-   <table>
-	   <thead>
-		   	<tr>
-				<td>Image Name</td>
-				<td>% Difference</td>
-			</tr>
-	   </thead>
-	   <tbody>
-	       <tr>
-			   <td><img src="test_image.png" width="100" height="100" /><br />test_image.png</td>
-			   <td>37%</td>
-	       </tr>
-	   </tbody>
-   </table>
-   
+
+
    <p>
-     <%= link_to "Just follow this link to see the changes.", "http://link.to/websites" %>
+     Please click on the link below to view changes.
+
+     <p><%= link_to "Just follow this link to see the changes.", "http://link.to/websites" %></p>
    </p>
+
+   <h3>Cheers,</h3>
+   <h5 style="margin-left:1">The Emulator team</h2>
  </body>
 </html>
