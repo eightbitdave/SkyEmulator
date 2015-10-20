@@ -1,7 +1,7 @@
 load 'lib/folder_structure.rb'
 
 
-my_package_folder = []
+my_package_folder = [""]
 bills_and_payments_folder = ["View my bill", "Make a payment", "Change payment due date", "Change payment method"]
 my_orders_folder = ["Track my order", "Claim my reward", "Engineer visits", "Set up viewing card"]
 my_details_folder = ["Change details", "Addiontional users", "Moving home"]
@@ -11,8 +11,8 @@ upgrade_folder = ["Offers", "Sky Box Sets", "HD", "Sports", "Movies", "Broadband
 fs = FolderStructure.new()
 
 #Create parent folder
-parent_folder_Name = "Data"
-latest_folder_name = Time.now().strftime('%Y-%m-%d %S')
+parent_folder_Name = "data"
+latest_folder_name = Time.now().strftime('%Y-%m-%d %H.%M%P')
 
 #If the parent path has a name
 if parent_folder_Name != ''
@@ -20,7 +20,7 @@ if parent_folder_Name != ''
     fs.create_folder(parent_folder_Name)
   end
 
-  parent_folder_Name = 'Data' + '/'
+  parent_folder_Name = 'data' + '/'
 end
 
 new_path = parent_folder_Name + latest_folder_name
