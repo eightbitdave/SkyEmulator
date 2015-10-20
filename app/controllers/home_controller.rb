@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   end
 
   def script
-    load 'selenium/login_loader.rb'
+    load 'selenium/loader/login_loader.rb'
     render :text => 'hello'
   end
 end

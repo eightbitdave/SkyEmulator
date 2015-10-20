@@ -1,4 +1,4 @@
-load 'selenium/login_base.rb'
+load 'selenium/base/login_base.rb'
 
 login = MySettingsLoggedInBase.new
 

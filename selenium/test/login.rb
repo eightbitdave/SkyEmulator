@@ -1,7 +1,7 @@
 require 'json'
 require 'selenium-webdriver'
 require 'test-unit'
-load 'selenium/login_base.rb'
+load '../selenium/base/login_base.rb'
 
 class MySettingsLoggedIn < Test::Unit::TestCase
 
